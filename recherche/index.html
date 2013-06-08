@@ -1,0 +1,114 @@
+--- 
+layout: default
+latex: true
+title: Recherche
+subtitle: "Une présentation rapide de mes activités présentes et passées"
+language: fr
+---
+{% capture side %}
+<!--  Début du Menu de gauche -->
+
+
+<div class="mini_menu" ></div>
+	
+<!--  Fin du Menu de gauche -->
+{% endcapture %}
+{% capture main %}
+<!--  Début du Contenu principal -->
+<a name="postdoc"></a>
+<h3>Modélisation stochastique en épidémiologie</h3>
+
+<p>
+<span class="label ">Travail de PostDoc</span> 
+<span class="label ">Modèles SI Stochastiques</span> 
+<span class="label ">Maximum de vraissemblance</span> 
+<span class="label ">Information de Fisher</span> 
+<span class="label ">Entropie</span> 
+</p>
+
+<p> Je travaille actuellement  sur la modélisation mathématique de la transmission de la bactérie Campylobacter Jejuni chez le poulet. 
+Les campylobacters sont considérés comme la principale cause bactérienne de gastroentérites dans le monde, dans les pays développés comme dans les pays en développement. 
+Ce projet a pour objectif de déterminer des plans d'expériences optimaux afin de réduire les coûts, d'estimer le taux de transmission de Campylobacter entre poulets au sein des batteries et d'en limiter la colonisation. 
+Mon travail s'inscrit dans le cadre de l'évaluation des risques. La démarche générale de l’évaluation du risque sanitaire s’articule autour de quatre étapes: l’identification du danger, l’étude de la relation dose-réponse, l’estimation de l’exposition des populations et la caractérisation des risques sanitaires. Je me concentre principalement sur la deuxième étape,  la modélisation et l'étude de la courbe dose-réponse, basées sur des données réelles.  
+</p>
+
+<p>Les modèles utilisés sont basés sur les hypothèses "d'actions indépendantes":
+<ul>
+<li> l'infection peut être initié par une unique particule  atteignant un site favorable, et</li>
+<li> la probabilité qu'une particule infectieuse donné soit capable d'engendré une infection  est indépendante de la concentration de la dose appliquée.</li>
+
+A partir de ces hypothèses plusieurs modèles (sans seuils) peuvent être utilisés afin de décrire la relation entre la dose d'étude appliquée $D$ et la probabilité d'infection $P_{inf}(D)$. Je me concentre sur deux modèles en particulier.</p>
+</ul>
+
+<ul>
+<li></B>Le modèle dose-réponse exponentiel</B> : $r$  désigne la probabilité de survie et de génération d'infection de la bactérie et est supposé constant. 
+ Le nombre de bactéries inocculées $D$ n'est pas parfaitement connue mais supposé suivre une distribution de Poisson :
+\begin{equation}
+\label{eq_expo}
+ P_{inf}(D;r)=1-e^{rD}. 
+ \end{equation}</li>
+<li> <B>Le modèle Kummer confluent Hypergeometric</B> : cas où $r$ varie entre chaque particule infectieuse et suit une distribution Bêta l'équation :
+\begin{equation}
+ P_{inf}(D;\alpha,\beta)=1- \ _1F_1(\alpha,\alpha+\beta,-D). 
+\end{equation} 
+où $_1F_1$ est la fonction  hypergéométrique confluente (fonction de Kummer)
+</li>
+</ul>
+...
+
+
+
+
+
+<a name="these"></a>
+<h3>Systèmes EDO en épidemiologie</h3>
+<p>
+<span class="label ">Travail de Thèse</span> 
+<span class="label ">Maladies Vectorielles</span> 
+<span class="label ">Modélisation SI-SIR</span> 
+<span class="label ">Contôle Optimal</span> 
+<span class="label ">Systèmes à Retard</span> 
+<span class="label ">Métapopulations</span> 
+</p>
+
+<p>
+Le Chikungunya, au même titre que la Dengue ou la Fièvre Jaune, sont des arbovirus de l'anglais « <B>Ar</B>thropod <B>bo</B>rne <B>virus</B> » , qui signifie virus véhiculé par les Arthropodes et à été identifié pour la première fois en 1953 en Tanzanie-Ouganda.  
+Chikungunya est un terme du dialect parlé sur le plateau Makonde, en Tanzanie, et  signifie « maladie de l'homme courbé » ou « maladie qui brise les os », en raison des symptômes et notamment des douleurs articulaires qui obligent le patient a adopter une certaine posture.
+Les vecteurs du Chikungunya sont les moustiques du genre Aedes : Aedes Aegepty et Aedes Albopictus.
+</p>
+
+<p>
+Contrairement à Aedes Aegypti, le moustique tigre Aedes Albopictus est doté d'une très grande capacité d'adaptation aux conditions climatiques des zones non tropicales. En effet, il s’adapte en réalisant une diapause hivernale, période pendant laquelle sa croissance est ralentie, afin de mieux supporter les saisons froides. Ce moustique présent en Afrique, aux États-Unis, en Inde ou encore en Europe fait désormais l'objet d'une vigilance accrue, notamment depuis l'épidémie survenue en 2005-2006 sur l'Ile de la Réunion. En effet, lors de cette dernière
+il a été observé une mutation du génotype du virus  qui  aurait conduit à l'émergence d'un virus mieux adapté au moustique, celle ci pourrait expliquer l'explosion de l'épidémie début 2006, épidémie qui a touché un tiers de la population totale de l'île. Un autre exemple, d'ampleur moindre,  d'adaptation du virus au moustique Aedes Albopictus concerne la l'épidémie observé en 2007 en Italie dans la région de Ravenne. 
+</p>
+<p>
+Les principaux symptômes de la maladie sont les maux de têtes, la fièvre, les douleurs articulaires pouvant entrainer l'immobilisation du patient et persistant pendant pluseurs mois. Malheureusement il n'existe à ce jour ni vaccin ni traitement spécifique.
+Le principaux moyen de lutte contre la maladie reside dans :
+<ul>
+<li> la lutte anti-vectorielle, comme la reduction des gites larvaire ;</li>
+<li> la prévention (utilisation de répulsifs, de moustiquaires...) ;</li>
+<li> le traitement des malades (traitement symptomatique, isolement des malades dans les hopitaux afin de reduire les contacts homme-vecteur...)</li>
+</ul>
+Plusieurs approches de modélisation et d'études mathématiques ont été abordées.
+
+
+
+
+
+<h4>Modélisation SI-SIR</h4>
+ La première approche consiste à utiliser des modèles classique en EDO (équations différentielles ordinaires). Le premier modèle proposé, décrit la dynamique de croissance du vecteur basé sur le cycle de vie biologique du moustique (œuf, larves/nymphes, adultes) et intégrant des phénomènes d'auto-régulation dû a la capacité d'accueil du milieu.  La seconde partie du travaille consiste alors à couplé ce modèle  à un système décrivant le mode de transmission du virus. Dans ce cas nous utilisons les modèles de type SI (Susceptible, Infected) afin de décrire la dynamique des femelles adules et un modèle de type SIR (Susceptible, Infected, Removed). L'étude de ces systèmes permet de mettre en evidence l'existence de seuil assurant la persistance ou l'extinction de l'espèce et/ou de la maladie.
+<h4> Contrôle optimal</h4>
+On s'intéresse ensuite à la modélisation des différente techniques de luttes afin de réduire le nombre d'infection humaine. Pour cela nous formulons un problème de contrôle optimal, intégrant la lutte anti-vectorielle, les traitement symptomatique ainsi que les moyens de prévention. Nous examinons alors plusieurs scénarios suivant la valeurs de seuils introduit dans la première partie.
+<h4> Modèle à retard</h4>
+Ensuite, nous formulons plusieurs modèles à retard (EDR). Le premier modèle concerne la dynamique de croissance du moustique, comme dans le cas EDO, mais prend cette fois ci en compte la durée du stade œuf, permettant ainsi de considérer le phénomène de diapause. Le second décrivant la transmission de la maladie, considère la période virémie du virus au sein du moustique. L'étude mathématique permet alors de constater que les modèles EDR sont équivalent dans le cas de la dynamique du moustique, mais que dans le cas de la transmission on observe un perte de stabilité de l'équilibre endémique et la survenue d'une bifurcation de Hopf.
+<h4> Modèle de type métapopulation</h4>
+Enfin, afin de prendre en compte la dynamique spatiale, nous formulons un modèle de type métapopulation, reprenant les modèles EDO, mais cette fois-ci prenant en compte les phénomènes de mobilité de la population humaine et des population de moustique. Nous étudions ensuite numériquement ce modèle en considérant un réseau où les nœuds représentent des habitats dans un environnement donné. Dans chacun de ces nœuds, les modèles de transmission et de dynamique de population apparaissent et sont couplé avec un voisinage définit par le réseau. Les liens du réseau représentent à la fois le voisinage géographique proche mais aussi des destinations plus lointaines qui représentent la mobilité humaine.
+Afin de valider l'approche, nous nous concentrons sur un vrai cas d'épidémie de chikungunya survenu en 2005-2006 sur l'île de la Réunion. L'île de la Réunion est modélisé à l'aide d'un réseau. Puisque nous voulons que ce réseau reflète la densité de population locale, nous considérons le réseau routier de l'île comme approximation à la densité humaine, considérant que chaque carrefour est un nœud du réseau. 
+La population locale sur chaque nœud est alors ajustée selon les données de l'INSEE. Enfin toute l'île est modélisée avec un réseau de 17.000 nœuds. Dans un premier temps les résultats montrent l'influence décisive de la mobilité humaine dans la propagation de la maladie. Nous comparons ensuite différents scenario  faisant intervenir la mobilité des moustiques.
+
+ <iframe width="425" height="349" src="http://www.youtube.com/embed/GlpOwauk2aE" frameborder="0" allowfullscreen></iframe> 
+
+
+<!--  Fin du Contenu principal -->
+{% endcapture %}
+{% include template.html %}

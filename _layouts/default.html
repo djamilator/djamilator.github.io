@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{site.title}} - {{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">
+	{% else %}
+	<meta name="description" content="Djamila Moulay, doctorante, Université du Havre, LMAH, Mathématiques, Systèmes dynamique, épidémiologie, EDO, EDR" />
+    {% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+	
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="{{ BASE_PATH }}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ BASE_PATH }}/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="{{ BASE_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+  
+  </head>
+
+  <body>
+    <div class="container">
+
+    <h1 class=""> {{ site.title }}  <small>{{ site.subtitle }}</small></h1>
+    
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <!-- <div class="container-narrow"> -->
+          
+          <ul class="nav ">
+	        {% if page.language == "en" %}
+			<li><a href="{{site.url}}/en/">About</a></li>
+			  {% assign pages_list = site.pages %}
+			  {% assign language = 'en' %}
+			  {% include pages_list.html %}
+			  <!-- <li><a href="{{site.url}}/"><img alt="fr" src="{{site.url}}/img/fr.png" style="height:20px" ></a></li> -->
+        </ul>
+        <a class="btn pull-right btn-info" href="{{site.url}}/" type="button" >Version Française</a>
+        
+			{% else %}
+			<li><a href="{{site.url}}/">À propos</a></li>
+			  {% assign pages_list = site.pages %}
+			  {% assign language = 'fr' %}
+			  {% include pages_list.html %}
+<!-- 				<li><a href="{{site.url}}/en/"><img alt="en" src="{{site.url}}/img/en.jpg" style="height:20px"></a></li>
+ -->
+        </ul>
+        <a class="btn pull-right btn-info" href="{{site.url}}/en/" >English Version</a>
+ 			{% endif %}
+       </div>
+
+    </div>
+	
+
+
+
+
+      <div class="content">
+        {{ content }}
+      </div>
+
+
+
+
+      <hr>
+      <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+        </p>
+      </footer>
+
+  </div> <!--  fin container -->
+
+	<script type="text/javascript" src="{{ BASE_PATH }}/assets/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="{{ BASE_PATH }}/assets/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{{ BASE_PATH }}/js/mini_menu.js"></script>
+	{% if page.latex %}
+		{% include mathjax %}
+	{% endif %}
+	
+    {% include analytics %}
+  </body>
+</html>
+
